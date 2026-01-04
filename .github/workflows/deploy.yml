@@ -1,0 +1,27 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      # This step assumes you have configured secrets for a provider like Vercel or AWS
+      # For Vercel, you would typically use the `vercel` CLI or their GitHub integration.
+      # This is a placeholder structure for a generic build pipeline.
+      - name: Ready for Deployment
+        run: echo "Build successful. Ready to deploy."
