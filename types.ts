@@ -1,3 +1,4 @@
+
 export type Language = 'hi' | 'en';
 
 export interface BilingualText {
@@ -34,14 +35,20 @@ export interface AchievementItem {
   id: string;
   count: string;
   label: BilingualText;
+  suffix?: string;
+  description: BilingualText;
 }
 
 export interface GuruProfile {
-  name: string;
+  name: BilingualText; // Changed from string to BilingualText
   brandName: string;
   title: BilingualText;
   bio: BilingualText;
   image: string;
+  expertise: {
+    hi: string[];
+    en: string[];
+  };
 }
 
 export interface SocialPost {

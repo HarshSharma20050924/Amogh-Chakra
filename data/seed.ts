@@ -1,3 +1,4 @@
+
 import { HeroSlide, ServiceItem, AchievementItem, SocialLinks, GuruProfile, SocialPost, GalleryItem } from '../types';
 
 export const SOCIAL_LINKS: SocialLinks = {
@@ -10,7 +11,10 @@ export const SOCIAL_LINKS: SocialLinks = {
 };
 
 export const GURU_PROFILE: GuruProfile = {
-  name: "Prabhav Sharma",
+  name: {
+    hi: "प्रभव शर्मा",
+    en: "Prabhav Sharma"
+  },
   brandName: "Amogh Chakra",
   title: {
     hi: "वैदिक ज्योतिषी और आध्यात्मिक मार्गदर्शक",
@@ -20,7 +24,31 @@ export const GURU_PROFILE: GuruProfile = {
     hi: "अमोघ चक्र के माध्यम से, मैं प्राचीन वैदिक ज्ञान को आधुनिक जीवन की समस्याओं के समाधान के लिए प्रस्तुत करता हूँ। ज्योतिष केवल भविष्यवाणी नहीं, बल्कि कर्म और भाग्य का विज्ञान है।",
     en: "Through Amogh Chakra, I bridge ancient Vedic wisdom with modern life solutions. Astrology is not just prediction; it is the science of Karma and Destiny."
   },
-  image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop"
+  image: "/images/Guruji.jpg",
+  expertise: {
+    hi: [
+        "पारद शिवलिंग निर्माण एवं प्रतिष्ठा",
+        "अंक शास्त्र",
+        "वास्तु शास्त्र",
+        "तत्व दर्शन",
+        "ऊर्जा उपचार",
+        "वनस्पति उपचार",
+        "यंत्र निर्माण एवं उपचार",
+        "पेंडुलम हीलिंग",
+        "राइस मैजिक"
+    ],
+    en: [
+        "Parad Shivling Construction & Pran-Pratishtha",
+        "Numerology",
+        "Vastu Shastra",
+        "Tattva Philosophy",
+        "Energy Healing",
+        "Herbal & Botanical Healing",
+        "Yantra Construction & Remedies",
+        "Pendulum Healing",
+        "Rice Magic"
+    ]
+  }
 };
 
 export const HERO_SLIDES: HeroSlide[] = [
@@ -158,34 +186,34 @@ export const SERVICES: ServiceItem[] = [
   }
 ];
 
-export const ACHIEVEMENTS: any[] = [
+export const ACHIEVEMENTS: AchievementItem[] = [
   {
     id: "exp",
-    count: "15",
-    suffix: "+",
-    label: { hi: "वर्षों का अनुभव", en: "Years Experience" },
-    description: { hi: "वैदिक ज्योतिष में गहरा ज्ञान", en: "Deep knowledge in Vedic Astrology" }
+    count: "27",
+    suffix: "",
+    label: { hi: "वर्ष", en: "Years" },
+    description: { hi: "सूर्य आवर्तन अनुभव", en: "Solar Returns Experience" }
   },
   {
     id: "clients",
-    count: "10K",
+    count: "25K",
     suffix: "+",
-    label: { hi: "संतुष्ट यजमान", en: "Happy Clients" },
-    description: { hi: "दुनिया भर में विश्वास", en: "Trusted Globally" }
+    label: { hi: "कुंडली विश्लेषण", en: "Horoscopes Decoded" },
+    description: { hi: "सटीक भविष्यवाणियां", en: "Accurate Predictions" }
   },
   {
     id: "countries",
-    count: "12",
+    count: "500",
     suffix: "+",
-    label: { hi: "देशों में सेवा", en: "Countries Served" },
-    description: { hi: "अंतरराष्ट्रीय उपस्थिति", en: "International Presence" }
+    label: { hi: "अंतरराष्ट्रीय उपस्थितियां", en: "Intl. Appearances" },
+    description: { hi: "वैश्विक मार्गदर्शन", en: "Global Guidance" }
   },
   {
     id: "rituals",
-    count: "5K",
+    count: "15K",
     suffix: "+",
-    label: { hi: "अनुष्ठान पूर्ण", en: "Rituals Completed" },
-    description: { hi: "पूर्ण विधि-विधान से", en: "Performed with Vedic Vidhi" }
+    label: { hi: "वैदिक अनुष्ठान", en: "Vedic Rituals" },
+    description: { hi: "पूर्ण विधि-विधान", en: "Performed with Vidhi" }
   }
 ];
 

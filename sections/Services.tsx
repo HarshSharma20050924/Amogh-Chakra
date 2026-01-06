@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { SERVICES, SOCIAL_LINKS } from '../data/seed';
 import { Scroll, Sun, HeartHandshake, Briefcase, Clock, Home, Star, X, ArrowRight, ArrowLeft, Move } from 'lucide-react';
@@ -57,21 +58,44 @@ const Services: React.FC = () => {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
-          {/* Header */}
+          {/* Header & Mantra Section */}
           <div className="text-center mb-24 relative">
-            <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="flex items-center justify-center gap-3 mb-6">
                 <span className="text-royal-900/60 font-bold uppercase tracking-[0.3em] text-[10px] md:text-xs">
                         {language === 'hi' ? 'गणित और फलित' : 'Calculations & Predictions'}
                 </span>
             </div>
-            <h2 className="text-4xl md:text-6xl font-serif font-medium text-royal-900 leading-tight">
+            
+            <h2 className="text-4xl md:text-6xl font-serif font-medium text-royal-900 leading-tight mb-12">
             {language === 'hi' ? 'शास्त्र सम्मत समाधान' : 'The Vedic Manuscript'}
             </h2>
-            <p className="mt-6 text-royal-900/60 text-lg font-serif italic tracking-wide max-w-lg mx-auto">
-                 {language === 'hi' 
-                    ? '"यथा शिखा मयूराणां, नागानां मणयो यथा..."' 
-                    : '"Like the crest of the peacock, like the gem on the cobra, Mathematics (Jyotish) stands at the top of the Vedanga."'}
-            </p>
+            
+            {/* The Complete Mantra Block */}
+            <div className="max-w-3xl mx-auto bg-white/80 p-10 rounded-lg border border-gold-500/30 shadow-lg backdrop-blur-md relative overflow-hidden">
+                {/* Decorative corners */}
+                <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-gold-600"></div>
+                <div className="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-gold-600"></div>
+                <div className="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-gold-600"></div>
+                <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-gold-600"></div>
+
+                <p className="font-hindi text-xl md:text-3xl text-gold-600 font-extrabold leading-relaxed mb-8 drop-shadow-sm">
+                    यथा शिखा मयूराणां नागानां मणयो यथा।<br/>
+                    तद्वेदाङ्गेषु शास्त्राणां गणितं मूर्धनि स्थितम्॥
+                </p>
+                
+                <div className="h-[2px] w-24 bg-gold-500 mx-auto mb-8 opacity-60"></div>
+
+                <div className="space-y-6">
+                    <p className="text-royal-900 font-hindi text-lg md:text-xl font-medium">
+                        "जिस प्रकार मोर के शरीर में शिखा सर्वोच्च होती है और नागों में मणि श्रेष्ठ होती है,
+                        उसी प्रकार समस्त वेदांगों और शास्त्रों में गणित (अंक ज्ञान) सर्वोपरि स्थान रखता है।"
+                    </p>
+                    <p className="text-royal-800 font-serif text-base md:text-lg italic font-medium leading-relaxed opacity-90">
+                        "Just as the crest is the highest ornament of a peacock and the gem is the most precious part of a serpent,
+                        in the same way, among all sciences and Vedic disciplines, the science of numbers holds the highest position."
+                    </p>
+                </div>
+            </div>
           </div>
 
           {/* Service Cards */}
@@ -121,9 +145,14 @@ const Services: React.FC = () => {
             ))}
           </div>
 
-          {/* View All Button */}
+          {/* View All Button - Enhanced */}
           <div className="text-center">
-                 <RitualButton onClick={openAllServices} variant="primary" icon={<Scroll size={16} />}>
+                 <RitualButton 
+                    onClick={openAllServices} 
+                    variant="primary" 
+                    icon={<Scroll size={20} />}
+                    className="!py-5 !px-12 !text-sm !shadow-[0_0_20px_rgba(217,119,6,0.3)] hover:!shadow-[0_0_30px_rgba(217,119,6,0.5)] !border-2 !border-gold-500/20"
+                 >
                     {language === 'hi' ? 'संपूर्ण ग्रंथ खोलें' : 'Open Full Manuscript'}
                  </RitualButton>
           </div>

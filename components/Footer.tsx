@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { SOCIAL_LINKS } from '../data/seed';
 import { Instagram, Youtube, Mail, Phone } from 'lucide-react';
@@ -10,13 +11,13 @@ const Footer: React.FC = () => {
   return (
     <footer id="contact" className="bg-royal-950 text-white relative overflow-hidden scroll-mt-20">
        
-       {/* The Seal - Giant OM - Increased Visibility */}
-       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white opacity-10 pointer-events-none font-hindi font-bold text-[20rem] select-none">
+       {/* The Seal - Giant OM - Increased Visibility (White Side) */}
+       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white/20 pointer-events-none font-hindi font-bold text-[20rem] select-none z-0">
           ॐ
        </div>
 
       {/* Top Divider */}
-      <div className="opacity-20">
+      <div className="opacity-20 relative z-10">
          <SacredDivider />
       </div>
 

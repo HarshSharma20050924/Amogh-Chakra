@@ -1,6 +1,8 @@
+
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { GURU_PROFILE } from '../data/seed';
+import { useLanguage } from '../context/LanguageContext';
 
 interface IntroProps {
   onComplete: () => void;
@@ -8,6 +10,7 @@ interface IntroProps {
 
 const Intro: React.FC<IntroProps> = ({ onComplete }) => {
   const [exit, setExit] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     // LOCK SCROLL IMMEDIATELY
@@ -87,14 +90,14 @@ const Intro: React.FC<IntroProps> = ({ onComplete }) => {
             />
         </div>
 
-        {/* Guru Name */}
+        {/* Guru Name - Increased Size */}
         <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8, duration: 0.8 }}
-            className="mt-4 font-sans text-xs md:text-sm uppercase tracking-[0.3em] text-white/60"
+            className="mt-6 font-sans text-lg md:text-xl uppercase tracking-[0.3em] text-white/80 font-bold"
         >
-            {GURU_PROFILE.name}
+            {t(GURU_PROFILE.name)}
         </motion.p>
       </motion.div>
     </motion.div>
